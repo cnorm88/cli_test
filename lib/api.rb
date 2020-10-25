@@ -11,6 +11,11 @@ class Api
     #strInstructionsDE
     #strGlass
     # :name, :Instructions, :glass, :german_instructions
+    drinks_array.each do |drink_hash|
+      binding.pry
+      drink = Drink.new
+      drink.name = drink_hash["strDrink"]
+    end
 
  end
 end
