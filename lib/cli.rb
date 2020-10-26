@@ -33,9 +33,24 @@ class Cli
     #ask use for choice
     puts "Enter the number of the drink you'd like"
     index = gets.strip.to_i - 1
+    #index valid? #btwn 0 & 6
+    until index.between?(0, Drink.all.length - 1)
+      # keep asking for user input
+      puts "Sorry invalid input. Choose a valid number"
+      index = gets.strip.to_i - 1
+    end
 
     drink_instance = Drink.all[index]
-    binding.pry
+    display_drink_details(drink_instance)
+  end
+
+  def display_drink_details(drink)
+    sleep(1)
+    puts "\n"
+    puts drink.name
+    puts "Glass: " + drink.glass
+    puts "Instructions: " + drink.instructions
+    puts "German Instructions: " + drink.german_instructions
   end
 
 end
