@@ -15,6 +15,9 @@ class Api
       binding.pry
       drink = Drink.new
       drink.name = drink_hash["strDrink"]
+      drink.instructions = drink_hash["strInstructions"]
+      drink.glass = drink_hash["strGlass"]
+      drink.german_instructions = drink_hash["strInstructionsDE"]
     end
 
  end
