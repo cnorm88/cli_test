@@ -12,13 +12,12 @@ class Api
     #strGlass
     # :name, :Instructions, :glass, :german_instructions
     drinks_array.each do |drink_hash|
-      binding.pry
       drink = Drink.new
       drink.name = drink_hash["strDrink"]
       drink.instructions = drink_hash["strInstructions"]
       drink.glass = drink_hash["strGlass"]
       drink.german_instructions = drink_hash["strInstructionsDE"]
     end
-
+binding.pry
  end
 end
