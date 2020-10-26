@@ -18,6 +18,6 @@ class Api
       drink.glass = drink_hash["strGlass"]
       drink.german_instructions = drink_hash["strInstructionsDE"]
     end
-binding.pry
+
  end
 end
