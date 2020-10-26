@@ -8,7 +8,7 @@ class Cli
 
   def menu
     #give user option to see list of drinks
-    puts "Would you like to see the list of drinks"
+    puts "Would you like to see the list of drinks?"
     puts "Type 'yes' to continue or any other key to exit"
 
     user_input = gets.strip.downcase
@@ -18,6 +18,13 @@ class Cli
       #display the list
       display_list_of_drinks
       user_drink_selection
+
+      sleep(2)
+      puts "\n"
+
+      menu
+    else
+      puts "Goodbye"
     end
   end
 
